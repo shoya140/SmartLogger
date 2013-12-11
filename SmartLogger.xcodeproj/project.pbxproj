@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7605921D185824540076543E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7605921C185824540076543E /* Foundation.framework */; };
+		7605921F185824540076543E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7605921E185824540076543E /* CoreGraphics.framework */; };
+		76059221185824540076543E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76059220185824540076543E /* UIKit.framework */; };
+		76059227185824540076543E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76059225185824540076543E /* InfoPlist.strings */; };
+		76059229185824540076543E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76059228185824540076543E /* main.m */; };
+		7605922D185824540076543E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7605922C185824540076543E /* AppDelegate.m */; };
+		76059230185824540076543E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7605922E185824540076543E /* Main.storyboard */; };
+		76059233185824540076543E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76059232185824540076543E /* ViewController.m */; };
+		76059235185824540076543E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76059234185824540076543E /* Images.xcassets */; };
+		7605923C185824540076543E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7605923B185824540076543E /* XCTest.framework */; };
+		7605923D185824540076543E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7605921C185824540076543E /* Foundation.framework */; };
+		7605923E185824540076543E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76059220185824540076543E /* UIKit.framework */; };
+		76059246185824540076543E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76059244185824540076543E /* InfoPlist.strings */; };
+		76059248185824540076543E /* SmartLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76059247185824540076543E /* SmartLoggerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7605923F185824540076543E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76059211185824540076543E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76059218185824540076543E;
+			remoteInfo = SmartLogger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76059219185824540076543E /* SmartLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7605921C185824540076543E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7605921E185824540076543E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		76059220185824540076543E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		76059224185824540076543E /* SmartLogger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartLogger-Info.plist"; sourceTree = "<group>"; };
+		76059226185824540076543E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		76059228185824540076543E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7605922A185824540076543E /* SmartLogger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartLogger-Prefix.pch"; sourceTree = "<group>"; };
+		7605922B185824540076543E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7605922C185824540076543E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7605922F185824540076543E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76059231185824540076543E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		76059232185824540076543E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		76059234185824540076543E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7605923A185824540076543E /* SmartLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7605923B185824540076543E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		76059243185824540076543E /* SmartLoggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartLoggerTests-Info.plist"; sourceTree = "<group>"; };
+		76059245185824540076543E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		76059247185824540076543E /* SmartLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartLoggerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76059216185824540076543E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7605921F185824540076543E /* CoreGraphics.framework in Frameworks */,
+				76059221185824540076543E /* UIKit.framework in Frameworks */,
+				7605921D185824540076543E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76059237185824540076543E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7605923C185824540076543E /* XCTest.framework in Frameworks */,
+				7605923E185824540076543E /* UIKit.framework in Frameworks */,
+				7605923D185824540076543E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76059210185824540076543E = {
+			isa = PBXGroup;
+			children = (
+				76059222185824540076543E /* SmartLogger */,
+				76059241185824540076543E /* SmartLoggerTests */,
+				7605921B185824540076543E /* Frameworks */,
+				7605921A185824540076543E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7605921A185824540076543E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76059219185824540076543E /* SmartLogger.app */,
+				7605923A185824540076543E /* SmartLoggerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7605921B185824540076543E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7605921C185824540076543E /* Foundation.framework */,
+				7605921E185824540076543E /* CoreGraphics.framework */,
+				76059220185824540076543E /* UIKit.framework */,
+				7605923B185824540076543E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76059222185824540076543E /* SmartLogger */ = {
+			isa = PBXGroup;
+			children = (
+				7605922B185824540076543E /* AppDelegate.h */,
+				7605922C185824540076543E /* AppDelegate.m */,
+				7605922E185824540076543E /* Main.storyboard */,
+				76059231185824540076543E /* ViewController.h */,
+				76059232185824540076543E /* ViewController.m */,
+				76059234185824540076543E /* Images.xcassets */,
+				76059223185824540076543E /* Supporting Files */,
+			);
+			path = SmartLogger;
+			sourceTree = "<group>";
+		};
+		76059223185824540076543E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76059224185824540076543E /* SmartLogger-Info.plist */,
+				76059225185824540076543E /* InfoPlist.strings */,
+				76059228185824540076543E /* main.m */,
+				7605922A185824540076543E /* SmartLogger-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76059241185824540076543E /* SmartLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				76059247185824540076543E /* SmartLoggerTests.m */,
+				76059242185824540076543E /* Supporting Files */,
+			);
+			path = SmartLoggerTests;
+			sourceTree = "<group>";
+		};
+		76059242185824540076543E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76059243185824540076543E /* SmartLoggerTests-Info.plist */,
+				76059244185824540076543E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76059218185824540076543E /* SmartLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7605924B185824540076543E /* Build configuration list for PBXNativeTarget "SmartLogger" */;
+			buildPhases = (
+				76059215185824540076543E /* Sources */,
+				76059216185824540076543E /* Frameworks */,
+				76059217185824540076543E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartLogger;
+			productName = SmartLogger;
+			productReference = 76059219185824540076543E /* SmartLogger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76059239185824540076543E /* SmartLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7605924E185824540076543E /* Build configuration list for PBXNativeTarget "SmartLoggerTests" */;
+			buildPhases = (
+				76059236185824540076543E /* Sources */,
+				76059237185824540076543E /* Frameworks */,
+				76059238185824540076543E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76059240185824540076543E /* PBXTargetDependency */,
+			);
+			name = SmartLoggerTests;
+			productName = SmartLoggerTests;
+			productReference = 7605923A185824540076543E /* SmartLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76059211185824540076543E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = ishimaru;
+				TargetAttributes = {
+					76059239185824540076543E = {
+						TestTargetID = 76059218185824540076543E;
+					};
+				};
+			};
+			buildConfigurationList = 76059214185824540076543E /* Build configuration list for PBXProject "SmartLogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76059210185824540076543E;
+			productRefGroup = 7605921A185824540076543E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76059218185824540076543E /* SmartLogger */,
+				76059239185824540076543E /* SmartLoggerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76059217185824540076543E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76059235185824540076543E /* Images.xcassets in Resources */,
+				76059227185824540076543E /* InfoPlist.strings in Resources */,
+				76059230185824540076543E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76059238185824540076543E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76059246185824540076543E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76059215185824540076543E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76059233185824540076543E /* ViewController.m in Sources */,
+				7605922D185824540076543E /* AppDelegate.m in Sources */,
+				76059229185824540076543E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76059236185824540076543E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76059248185824540076543E /* SmartLoggerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76059240185824540076543E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76059218185824540076543E /* SmartLogger */;
+			targetProxy = 7605923F185824540076543E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76059225185824540076543E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76059226185824540076543E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7605922E185824540076543E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7605922F185824540076543E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76059244185824540076543E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76059245185824540076543E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76059249185824540076543E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7605924A185824540076543E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7605924C185824540076543E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartLogger/SmartLogger-Prefix.pch";
+				INFOPLIST_FILE = "SmartLogger/SmartLogger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7605924D185824540076543E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartLogger/SmartLogger-Prefix.pch";
+				INFOPLIST_FILE = "SmartLogger/SmartLogger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7605924F185824540076543E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SmartLogger.app/SmartLogger";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartLogger/SmartLogger-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SmartLoggerTests/SmartLoggerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		76059250185824540076543E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SmartLogger.app/SmartLogger";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartLogger/SmartLogger-Prefix.pch";
+				INFOPLIST_FILE = "SmartLoggerTests/SmartLoggerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76059214185824540076543E /* Build configuration list for PBXProject "SmartLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76059249185824540076543E /* Debug */,
+				7605924A185824540076543E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7605924B185824540076543E /* Build configuration list for PBXNativeTarget "SmartLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7605924C185824540076543E /* Debug */,
+				7605924D185824540076543E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7605924E185824540076543E /* Build configuration list for PBXNativeTarget "SmartLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7605924F185824540076543E /* Debug */,
+				76059250185824540076543E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76059211185824540076543E /* Project object */;
+}
