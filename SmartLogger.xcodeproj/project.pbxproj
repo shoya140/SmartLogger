@@ -21,6 +21,9 @@
 		7605923E185824540076543E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76059220185824540076543E /* UIKit.framework */; };
 		76059246185824540076543E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76059244185824540076543E /* InfoPlist.strings */; };
 		76059248185824540076543E /* SmartLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76059247185824540076543E /* SmartLoggerTests.m */; };
+		760592551858249A0076543E /* FileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 760592521858249A0076543E /* FileWriter.m */; };
+		760592561858249A0076543E /* SensorMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 760592541858249A0076543E /* SensorMonitor.m */; };
+		76059259185824F30076543E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76059258185824F30076543E /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		76059243185824540076543E /* SmartLoggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartLoggerTests-Info.plist"; sourceTree = "<group>"; };
 		76059245185824540076543E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76059247185824540076543E /* SmartLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartLoggerTests.m; sourceTree = "<group>"; };
+		760592511858249A0076543E /* FileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileWriter.h; sourceTree = "<group>"; };
+		760592521858249A0076543E /* FileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileWriter.m; sourceTree = "<group>"; };
+		760592531858249A0076543E /* SensorMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorMonitor.h; sourceTree = "<group>"; };
+		760592541858249A0076543E /* SensorMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorMonitor.m; sourceTree = "<group>"; };
+		76059258185824F30076543E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76059259185824F30076543E /* CoreMotion.framework in Frameworks */,
 				7605921F185824540076543E /* CoreGraphics.framework in Frameworks */,
 				76059221185824540076543E /* UIKit.framework in Frameworks */,
 				7605921D185824540076543E /* Foundation.framework in Frameworks */,
@@ -101,6 +110,7 @@
 		7605921B185824540076543E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76059258185824F30076543E /* CoreMotion.framework */,
 				7605921C185824540076543E /* Foundation.framework */,
 				7605921E185824540076543E /* CoreGraphics.framework */,
 				76059220185824540076543E /* UIKit.framework */,
@@ -118,6 +128,7 @@
 				76059231185824540076543E /* ViewController.h */,
 				76059232185824540076543E /* ViewController.m */,
 				76059234185824540076543E /* Images.xcassets */,
+				76059257185824A10076543E /* Model */,
 				76059223185824540076543E /* Supporting Files */,
 			);
 			path = SmartLogger;
@@ -150,6 +161,17 @@
 				76059244185824540076543E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76059257185824A10076543E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				760592511858249A0076543E /* FileWriter.h */,
+				760592521858249A0076543E /* FileWriter.m */,
+				760592531858249A0076543E /* SensorMonitor.h */,
+				760592541858249A0076543E /* SensorMonitor.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				760592561858249A0076543E /* SensorMonitor.m in Sources */,
+				760592551858249A0076543E /* FileWriter.m in Sources */,
 				76059233185824540076543E /* ViewController.m in Sources */,
 				7605922D185824540076543E /* AppDelegate.m in Sources */,
 				76059229185824540076543E /* main.m in Sources */,
@@ -460,6 +484,7 @@
 				7605924D185824540076543E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7605924E185824540076543E /* Build configuration list for PBXNativeTarget "SmartLoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +493,7 @@
 				76059250185824540076543E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
