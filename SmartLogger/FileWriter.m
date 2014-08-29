@@ -15,10 +15,6 @@ NSDictionary *exifDictionary;
 
 @implementation FileWriter
 
-@synthesize currentFilePrefix, currentRecordingDirectory;
-@synthesize accelerometerFileName;
-@synthesize gyroFileName;
-
 -(id)init{
     self = [super init];
     if(self != nil){
@@ -37,18 +33,18 @@ NSDictionary *exifDictionary;
     if(!isRecording){
 
         NSDate *now = [NSDate date];
-        self.currentFilePrefix = [[now description] stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+        currentFilePrefix = [[now description] stringByReplacingOccurrencesOfString:@" " withString:@"_"];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentDirectory = [paths lastObject];
-        self.currentRecordingDirectory = [documentDirectory stringByAppendingPathComponent:self.currentFilePrefix];
-        [fileManager createDirectoryAtPath:self.currentRecordingDirectory withIntermediateDirectories:NO attributes:nil error:NULL];
+        currentRecordingDirectory = [documentDirectory stringByAppendingPathComponent:currentFilePrefix];
+        [fileManager createDirectoryAtPath:currentRecordingDirectory withIntermediateDirectories:NO attributes:nil error:NULL];
         
         //reset currentFilePrefix
         currentFilePrefix = @"";
         
         //init files
-        [self initAccelerometerFile:self.currentFilePrefix];
-        [self initGyroFile:self.currentFilePrefix];
+        [self initAccelerometerFile:currentFilePrefix];
+        [self initGyroFile:currentFilePrefix];
         
         isRecording = true;
     }
@@ -81,37 +77,36 @@ NSDictionary *exifDictionary;
 }
 
 - (void)initAccelerometerFile:(NSString*)name {
-    self.accelerometerFileName = [self setupTextFile:&accelerometerFile
-                                    withBaseFileName:name 
-                                            appendix:kAccelerometerFileAppendix
-                                     dataDescription:@"Accelerometer data"
-                                            subtitle:[NSString stringWithFormat:@"%% Sampling frequency: 50 Hz\n"]
-                                  columnDescriptions:[NSArray arrayWithObjects:
-                                                      @"Seconds.milliseconds since 1970",
-                                                      @"Acceleration value in x-direction",
-                                                      @"Acceleration value in y-direction",
-                                                      @"Acceleration value in z-direction",
-                                                      nil]
+    accelerometerFileName = [self setupTextFile:&accelerometerFile
+                               withBaseFileName:name
+                                       appendix:kAccelerometerFileAppendix
+                                dataDescription:@"Accelerometer data"
+                                       subtitle:[NSString stringWithFormat:@"%% Sampling frequency: 50 Hz\n"]
+                             columnDescriptions:[NSArray arrayWithObjects:
+                                                 @"Seconds.milliseconds since 1970",
+                                                 @"Acceleration value in x-direction",
+                                                 @"Acceleration value in y-direction",
+                                                 @"Acceleration value in z-direction",
+                                                 nil]
                                   ];
 }
 
 
 - (void)initGyroFile:(NSString*)name {
-    
-    self.gyroFileName = [self setupTextFile:&gyroFile
-                           withBaseFileName:name
-                                   appendix:kGyroscopeFileAppendix
-                            dataDescription:@"Gyrometer data"
-                                   subtitle:nil
-                         columnDescriptions:[NSArray arrayWithObjects:
-                                             @"Seconds.milliseconds since 1970",
-                                             @"Gyro X",
-                                             @"Gyro Y",
-                                             @"Gyro Z",
-                                             @"Roll of the device",
-                                             @"Pitch of the device",
-                                             @"Yaw of the device",
-                                             nil]
+    gyroFileName = [self setupTextFile:&gyroFile
+                      withBaseFileName:name
+                              appendix:kGyroscopeFileAppendix
+                      dataDescription:@"Gyrometer data"
+                              subtitle:[NSString stringWithFormat:@"%% Sampling frequency: 50 Hz\n"]
+                    columnDescriptions:[NSArray arrayWithObjects:
+                                        @"Seconds.milliseconds since 1970",
+                                        @"Gyro X",
+                                        @"Gyro Y",
+                                        @"Gyro Z",
+                                        @"Roll of the device",
+                                        @"Pitch of the device",
+                                        @"Yaw of the device",
+                                        nil]
                          ];
 }
 

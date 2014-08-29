@@ -9,11 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "SensorMonitor.h"
 
-#define PRODUCT_NAME @"SmartLogger"
-
-
 extern NSString* const kAccelerometerFileAppendix;
 extern NSString* const kGyroscopeFileAppendix;
+extern NSString* const kAttitudeFileAppendix;
 extern NSString* const kTimestampFileAppendix;
 
 @interface FileWriter : NSObject{
@@ -21,29 +19,21 @@ extern NSString* const kTimestampFileAppendix;
     bool isRecording;
     
     NSFileManager *fileManager;
-    
     FILE *accelerometerFile;
     FILE *gyroFile;
+    FILE *attitudeFile;
     
-    NSString *accelerometerFileName;
-    NSString *gyroFileName;
     NSString *currentFilePrefix;
     NSString *currentRecordingDirectory;
+    NSString *currentRecordingDirectoryForPicture;
+    NSString *accelerometerFileName;
+    NSString *gyroFileName;
+    NSString *attitudeFileName;
     
 }
-
-@property(nonatomic,retain)NSString *currentFilePrefix;
-@property(nonatomic,retain)NSString *currentRecordingDirectory;
-@property(nonatomic,retain)NSString *currentRecordingDirectoryForPicture;
-@property(nonatomic,retain)NSString *accelerometerFileName;
-@property(nonatomic,retain)NSString *gyroFileName;
 
 -(void)startRecording;
 -(void)stopRecording;
 -(void)recordSensorValue:(CMDeviceMotion *)motionTN timestamp:(NSTimeInterval)timestampTN;
-
--(NSString *)setupTextFile:(FILE **)file withBaseFileName:(NSString *)baseFileName appendix:(NSString *)appendix dataDescription:(NSString *) description subtitle:(NSString *) subtitle columnDescriptions:(NSArray *)columnDescriptions;
--(void)initAccelerometerFile:(NSString*)name;
--(void)initGyroFile:(NSString*)name;
 
 @end
