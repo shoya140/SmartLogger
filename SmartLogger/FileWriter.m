@@ -105,9 +105,6 @@ NSDictionary *exifDictionary;
                                    subtitle:nil
                          columnDescriptions:[NSArray arrayWithObjects:
                                              @"Seconds.milliseconds since 1970",
-                                             @"Gyro X",
-                                             @"Gyro Y",
-                                             @"Gyro Z",
                                              @"Roll of the device",
                                              @"Pitch of the device",
                                              @"Yaw of the device",
@@ -136,6 +133,19 @@ NSDictionary *exifDictionary;
                 motionTN.attitude.roll,
                 motionTN.attitude.pitch,
                 motionTN.attitude.yaw
+                );
+    }
+}
+
+- (void)recordTimestamp:(NSTimeInterval)timestampTN withRoll:(float)roll pitch:(float)pitch yaw:(float)yaw
+{
+    if (isRecording) {
+        fprintf(gyroFile,
+                "%10.5f,%f,%f,%f\n",
+                timestampTN,
+                roll,
+                pitch,
+                yaw
                 );
     }
 }

@@ -14,6 +14,8 @@
     bool isRuning;
     bool isCalibrated;
     float frequency;
+    float baseRoll;
+    float basePitch;
     float baseYaw;
 }
 
@@ -27,6 +29,8 @@
     isRuning = false;
     isCalibrated = false;
     frequency = 50.0;
+    baseRoll = 0.00;
+    basePitch = 0.00;
     baseYaw = 0.0;
     sensorMonitor = [[SensorMonitor alloc] init];
     sensorMonitor.delegate = self;
@@ -69,14 +73,19 @@
 {
     if (isRuning) {
         if (!isCalibrated) {
+            baseRoll = motion.attitude.roll;
+            basePitch = motion.attitude.pitch;
             baseYaw = motion.attitude.yaw;
             isCalibrated = true;
         }
         
-        self.rollLabel.text = [NSString stringWithFormat:@"tilt +right and -left: %.2f",motion.attitude.roll*180/3.14];
-        self.pitchLabel.text = [NSString stringWithFormat:@"tilt +up and -down: %.2f",motion.attitude.pitch*180/3.14];
-        self.yawLabel.text = [NSString stringWithFormat:@"rotate +right and -left: %.2f",-(motion.attitude.yaw-baseYaw)*180/3.14];
-        [fileWriter recordSensorValue:motion timestamp:timestamp];
+        float roll = (motion.attitude.roll-baseRoll)*180/3.14;
+        float pitch = (motion.attitude.pitch-basePitch)*180/3.14;
+        float yaw = -(motion.attitude.yaw-baseYaw)*180/3.14;
+        self.rollLabel.text = [NSString stringWithFormat:@"%.2f",roll];
+        self.pitchLabel.text = [NSString stringWithFormat:@"%.2f",pitch];
+        self.yawLabel.text = [NSString stringWithFormat:@"%.2f",yaw];
+        [fileWriter recordTimestamp:timestamp withRoll:roll pitch:pitch yaw:yaw];
     }
 }
 
