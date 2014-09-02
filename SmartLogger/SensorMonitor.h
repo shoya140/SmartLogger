@@ -18,14 +18,13 @@
 @interface SensorMonitor : NSObject{
     
     __weak id <SensorMonitorDelegate> _delegate;
-    float _systemVersion;
+    float systemVersion;
     
     NSDate *beginningOfEpoch;
     NSTimeInterval timestampOffsetFrom1970;
     BOOL timestampOffsetInitialized;
     
 }
-
 
 @property(nonatomic, weak) id <SensorMonitorDelegate> delegate;
 @property(nonatomic, retain) CMMotionManager *manager;

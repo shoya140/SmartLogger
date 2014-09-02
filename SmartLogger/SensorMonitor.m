@@ -19,8 +19,7 @@
 
 - (void)prepareCMDeviceMotion{
     
-    _systemVersion = [[[UIDevice currentDevice]systemVersion]floatValue];
-    NSLog(@"iOS version: %f", _systemVersion);
+    systemVersion = [[[UIDevice currentDevice]systemVersion]floatValue];
     self.manager = [[CMMotionManager alloc]init];
     beginningOfEpoch = [[NSDate alloc]initWithTimeIntervalSince1970:0.0];
     timestampOffsetInitialized = false;
@@ -43,13 +42,12 @@
             }
             
             NSTimeInterval timestamp = motion.timestamp + timestampOffsetFrom1970;
-            
             [self.delegate sensorValueChanged:motion timestamp:timestamp];
             
         };
         
         //Start device motion
-        if(5.0 < _systemVersion){
+        if(5.0 < systemVersion){
             [self.manager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXTrueNorthZVertical toQueue:[NSOperationQueue currentQueue] withHandler:handler];
         }else{
             [self.manager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:handler];
@@ -59,7 +57,7 @@
 
 
 - (void)stopSensor{
-    if(4.0 < _systemVersion){
+    if(4.0 < systemVersion){
         if(self.manager.deviceMotionActive){
             [self.manager stopDeviceMotionUpdates];
         }
